@@ -21,6 +21,7 @@ public class Consulta {
     public Consulta(int codigo, String data) {
         this.codigo = codigo;
         this.data = data;
+        this.exames = new ArrayList<Exame>();
     }
     
     public void addExame(Exame e) {

@@ -11,7 +11,7 @@ package fatec.poo.model;
 public class Pessoa {
     private String cpf;
     private String nome;
-    private String enderco;
+    private String endereco;
     private String telefone;
 
     public Pessoa(String cpf, String nome) {
@@ -27,16 +27,16 @@ public class Pessoa {
         return nome;
     }
 
-    public String getEnderco() {
-        return enderco;
+    public String getEndereco() {
+        return endereco;
     }
 
     public String getTelefone() {
         return telefone;
     }
 
-    public void setEnderco(String enderco) {
-        this.enderco = enderco;
+    public void setEndereco(String enderco) {
+        this.endereco = enderco;
     }
 
     public void setTelefone(String telefone) {

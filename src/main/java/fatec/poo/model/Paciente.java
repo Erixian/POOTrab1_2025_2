@@ -5,6 +5,7 @@
 package fatec.poo.model;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 
 /**
  *
@@ -14,10 +15,18 @@ public class Paciente extends Pessoa {
     private LocalDate dataNascimento;
     private double altura;
     private double peso;
+    private ArrayList<Consulta> consultas; 
+    
 
     public Paciente(String cpf, String nome, LocalDate dataNasc) {
         super(cpf, nome);
         this.dataNascimento = dataNasc;
+        consultas = new ArrayList<Consulta>();
+    }
+    
+    public void addConsulta(Consulta c){
+        consultas.add(c);
+        c.setPaciente(this);
     }
     
     public double calcIMC() {

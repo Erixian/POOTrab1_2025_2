@@ -16,17 +16,40 @@ public class Consulta {
     private double valor;
     private ArrayList<Exame> exames;
     private Medico medico;
-    private Paciente Paciente;  
+    private Paciente Paciente;
+    private ArrayList<Medicacao> medicacoes;
 
     public Consulta(int codigo, String data) {
         this.codigo = codigo;
         this.data = data;
         this.exames = new ArrayList<Exame>();
+        this.medicacoes = new ArrayList<Medicacao>();
     }
     
     public void addExame(Exame e) {
         this.exames.add(e);
         e.setConsulta(this);
+    }
+    
+    public void addMedicacao(Medicacao m){
+        medicacoes.add(m);
+        m.setConsulta(this);
+    }
+
+    public Medico getMedico() {
+        return medico;
+    }
+
+    public void setMedico(Medico medico) {
+        this.medico = medico;
+    }
+
+    public Paciente getPaciente() {
+        return Paciente;
+    }
+
+    public void setPaciente(Paciente Paciente) {
+        this.Paciente = Paciente;
     }
     
     public double calcValorTotalPagar() {

@@ -10,18 +10,6 @@ public class Medicacao {
     private int qtdeDias;
     private Consulta consulta;
     
-    /*
-    Na documentação o contrutor da classe Medicacao recebe como parametro
-    uma variavel chamada "descricao", que não existe em nenhuma outra parte
-    da documentação.
-    
-    Devido a modelagem não pedir o metodo "setNome()", nós assumimos que o 
-    parametro de entrada seria "nome" e não "descricao" como sugerido na 
-    modelagem.
-    
-    FALAR COM O DIMAS
-    */
-    
     public Medicacao(String nome) {
         this.nome = nome;
     }

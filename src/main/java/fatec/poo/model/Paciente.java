@@ -5,6 +5,8 @@
 package fatec.poo.model;
 
 import java.time.LocalDate;
+import java.time.Period;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 
 /**
@@ -29,12 +31,14 @@ public class Paciente extends Pessoa {
         c.setPaciente(this);
     }
     
+    //Professor, arredondei o valor de saida do metodo para evitar decimais gigantes
     public double calcIMC() {
-        return 0.0;
+        double imc = peso/(Math.pow(altura, 2));
+        return Math.round(imc * 100) / 100.0;
     }
     
-    public int calcIdade(LocalDate dataNasc) {
-        return 0;
+    public int calcIdade(LocalDate dataAtual) {
+        return Period.between(dataNascimento, dataAtual).getYears();
     }
 
     public void setAltura(double altura) {
@@ -45,8 +49,8 @@ public class Paciente extends Pessoa {
         this.peso = peso;
     }
 
-    public LocalDate getDataNascimento() {
-        return dataNascimento;
+    public String getDataNascimento() {
+        return dataNascimento.format(DateTimeFormatter.ofPattern("dd/MM/yyyy"));
     }
 
     public double getAltura() {

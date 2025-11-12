@@ -53,11 +53,11 @@ public class Consulta {
     }
     
     public double calcValorTotalPagar() {
-        for(Exame e : this.exames) {
-            this.valor += e.getValor();
+        double totalPagar = 0.0;
+        for(int i = 0; i < exames.size(); i++) {
+            totalPagar += exames.get(i).getValor();
         }
-        
-        return this.valor;
+        return totalPagar + valor;
     }
 
     public void setValor(double valor) {
@@ -75,6 +75,4 @@ public class Consulta {
     public double getValor() {
         return valor;
     }
-    
-    
 }

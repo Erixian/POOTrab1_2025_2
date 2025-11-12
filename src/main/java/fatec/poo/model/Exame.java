@@ -25,24 +25,12 @@ public class Exame {
         this.consulta = consulta;
     }
 
-    public String getData() {
-        return data;
-    }
-
     public void setData(String data) {
         this.data = data;
     }
 
-    public String getHorario() {
-        return horario;
-    }
-
     public void setHorario(String horario) {
         this.horario = horario;
-    }
-
-    public double getValor() {
-        return valor;
     }
 
     public void setValor(double valor) {
@@ -56,5 +44,16 @@ public class Exame {
     public String getDescricao() {
         return descricao;
     }
-
+    
+     public String getData() {
+        return data;
+    }
+     
+    public String getHorario() {
+        return horario;
+    }
+    
+    public double getValor() {
+        return valor;
+    }
 }
